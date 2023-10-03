@@ -1,0 +1,91 @@
+@import "../node_modules/bootstrap/scss/functions";
+       
+// Custom.scss
+// Вариант Б. Включите части Bootstrap
+
+// 1. Сначала включите функции (чтобы Вы могли управлять цветами, SVG, вычислением и т.д.)
+
+// 2. Включите сюда любые переопределения переменных по умолчанию
+
+$primary: #8EE600;
+$secondary: #D0CFCF;
+$light: #F4F4F4;
+$dark: #313535;
+
+.bi-list::before {
+  font-size: 2rem;
+  border: #8EE600 solid 3px;
+  border-radius: 8px;
+}
+
+.navbar-nav .nav-link {
+  
+  color: black;
+}
+
+.button {
+  box-shadow: none;
+}
+
+
+
+// 3. Включите оставшуюся часть необходимых таблиц стилей Bootstrap
+@import "../node_modules/bootstrap/scss/variables";
+@import "../node_modules/bootstrap/scss/mixins";
+@import "../node_modules/bootstrap/scss/root";
+
+// 4. Включите любой необязательный Bootstrap CSS по мере необходимости
+@import "../node_modules/bootstrap/scss/utilities";
+@import "../node_modules/bootstrap/scss/reboot";
+@import "../node_modules/bootstrap/scss/type";
+@import "../node_modules/bootstrap/scss/images";
+@import "../node_modules/bootstrap/scss/containers";
+@import "../node_modules/bootstrap/scss/grid";
+@import "../node_modules/bootstrap/scss/helpers";
+@import "../node_modules/bootstrap/scss/navbar";
+@import "../node_modules/bootstrap/scss/nav";
+@import "../node_modules/bootstrap/scss/dropdown";
+@import "../node_modules/bootstrap/scss/bootstrap.scss";
+
+// 5. При желании можно включить последний API утилит для генерации классов на основе карты Sass в `_utilities.scss`
+@import "../node_modules/bootstrap/scss/utilities/api";
+
+// 6. Добавьте сюда дополнительный пользовательский код
+
+
+.accordion-button:focus {
+  
+  border-color: white;
+  
+}
+
+.accordion-button:not(.collapsed) {
+  color: #8EE600;
+  background-color: white;
+  box-shadow: none;
+}
+
+.nav-link {
+  color: #313535;
+}
+
+.accordion-flush .accordion-item .accordion-button {
+  display: block;
+}
+
+
+
+.rounded-3 {
+  border-radius: 0.8rem !important;
+}
+
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) { 
+  div.p {font-size:1.2rem;} /*1rem = 16px*/
+}
+ 
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {  
+  div.p {font-size:1.5rem;} /*1rem = 16px*/  
+}  
